@@ -17,16 +17,16 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         
         let cell:TestTableViewCell = tableView.dequeueReusableCellWithIdentifier("TestCell", forIndexPath: indexPath) as! TestTableViewCell
         
-//        let cell2:TestTableViewCell2 = tableView.dequeueReusableCellWithIdentifier("TestCell2", forIndexPath: indexPath) as! TestTableViewCell2
+        let cell2:TestTableViewCell2 = tableView.dequeueReusableCellWithIdentifier("TestCell2", forIndexPath: indexPath) as! TestTableViewCell2
 
 //        cell.Label0.text = String(indexPath.row)
         cell.Label0.text = "(\(indexPath.section), \(indexPath.row))"
         cell.Image0?.image = UIImage(named: "2")
         cell.Image1?.image = UIImage(named: "4")
         
-//        cell2.Label1.text = "\(indexPath.row)"
-//        cell2.Image2.image = UIImage(named: "1")
-//        cell2.Image3.image = UIImage(named: "3")
+        cell2.Label1.text = "\(indexPath.row)"
+        cell2.Image2.image = UIImage(named: "1")
+        cell2.Image3.image = UIImage(named: "3")
         
         return cell
 //        return cell2
@@ -68,8 +68,8 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         let testXib = UINib(nibName:"TestTableViewCell", bundle:nil)
         testTableView.registerNib(testXib, forCellReuseIdentifier:"TestCell")
         
-//        let testXib2 = UINib(nibName: "TestTableViewCell2", bundle: nil)
-//        testTableView.registerNib(testXib2, forCellReuseIdentifier: "TestCell2")
+        let testXib2 = UINib(nibName: "TestTableViewCell2", bundle: nil)
+        testTableView.registerNib(testXib2, forCellReuseIdentifier: "TestCell2")
     }
 
     override func didReceiveMemoryWarning() {
